@@ -1,0 +1,4394 @@
+<html><head id="ctl00_Head1"><meta charset="utf-8"><script src="https://js-agent.newrelic.com/nr-1016.min.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"241ff5f993","applicationID":"5516706","transactionName":"NgAGbBZYWxIEAhBcCg9KIFcQd1AVJg4KQRcOCQhdFhZ0AxYVFlQGFSYLVhBYXA8AEzRUAgRKLVYAXE0=","queueTime":0,"applicationTime":290,"ttGuid":"ADE7C960392D03E7","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+  
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><style>@media print {#ghostery-purple-box {display:none !important}}</style>
+  <script>
+    if (typeof jQuery == 'undefined') {
+      document.write(unescape("%3Cscript src='/Script/libs/jquery-1.7.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+  </script>
+
+
+
+  <!--jcarousellite niet buiten de minifier blijven -->
+  <script src="/Script/libs/jcarousellite_1.0.1.min.js"></script>   
+  <script type="text/javascript" src="/Script/lightbox.js"></script>
+  <link rel="stylesheet" type="text/css" href="/combres.axd/stedelijkCss/1121176828/"><script type="text/javascript" src="/combres.axd/stedelijkJs/1737693260/"></script>
+  <meta name="robots" content="noindex, follow">
+<title>
+	collection online - Stedelijk Museum Amsterdam
+  
+</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="DC.contributor" content="Q42"><link rel="DC.contributor" href="http://q42.nl"><meta name="DC.contributor" content="Fabrique Communicatie en Design"><link rel="DC.contributor" href="http://www.fabrique.nl">
+
+  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/rss+xml" rel="alternate" href="http://feeds.feedburner.com/stedelijknews" title="Stedelijk News"><link type="application/rss+xml" rel="alternate" href="http://feeds.feedburner.com/stedelijkagenda-english" title="Stedelijk Agenda">
+
+  <script type="text/javascript">    var switchTo5x = true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">    stLight.options({ publisher: "25ca53ac-c657-4555-b6fc-f99846d12f2a", embeds: true, doNotHash: false, doNotCopy: false, hashAddressBar: false });</script>
+</head>
+
+<body class="chrome searchpage ">    
+    
+    <div id="resultcontent" class="">
+
+
+
+    <div class="resultcontent">
+      
+      <div class="newPage" id="page-1">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/6135-siena" class="teaser teasercontent-right teaser-link column" title="Siena">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Aalto, Alvar<br>Siena, 1954</p>
+  
+</a>
+<a href="/en/artwork/7207-mao-91" class="teaser teasercontent-right teaser-link column" title="MAO 91">
+      
+      <img src="/assets/textiel/2000.1.0312.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Adolfsdóttir, Margrét<br>MAO 91, 1999</p>
+  
+</a>
+<a href="/en/artwork/921-geen-titel" class="teaser teasercontent-right teaser-link column" title="[geen titel]">
+      
+      <img src="/assets/1996.2.0343.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Alechinsky, Pierre<br>[geen titel], 1960</p>
+  
+</a>
+<a href="/en/artwork/14012-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 1639.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>kledingstof, 1954</p>
+  
+</a>
+<a href="/en/artwork/40176-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 647.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>kledingstof, 1954</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/6140-siena" class="teaser teasercontent-right teaser-link column" title="Siena">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Aalto, Alvar<br>Siena, 1954</p>
+  
+</a>
+<a href="/en/artwork/7208-mao-92" class="teaser teasercontent-right teaser-link column" title="MAO 92">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Adolfsdóttir, Margrét<br>MAO 92, 1999</p>
+  
+</a>
+<a href="/en/artwork/8636-cloth-fighting" class="teaser teasercontent-right teaser-link column" title="Cloth Fighting">
+      
+      <img src="/assets/KNA 6570.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Anna<br>Cloth Fighting, 1979</p>
+  
+</a>
+<a href="/en/artwork/40174-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 644.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>kledingstof, 1954</p>
+  
+</a>
+<a href="/en/artwork/40177-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 648.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>kledingstof, 1954</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/9649-zwart-kleed" class="teaser teasercontent-right teaser-link column" title="Zwart kleed">
+      
+      <img src="/assets/KNA 3158.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Abakanowicz, Magdalena<br>Zwart kleed, 1968</p>
+  
+</a>
+<a href="/en/artwork/7209-mao-93" class="teaser teasercontent-right teaser-link column" title="MAO 93">
+      
+      <img src="/assets/textiel/2000.1.0314.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Adolfsdóttir, Margrét<br>MAO 93, 1999</p>
+  
+</a>
+<a href="/en/artwork/10249-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 643.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>kledingstof, 1954</p>
+  
+</a>
+<a href="/en/artwork/40175-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 645.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>kledingstof, 1954</p>
+  
+</a>
+<a href="/en/artwork/49559-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1640.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>Chilla, 1954</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page2">page 2</h4>
+      
+      <div class="newPage" id="page-2">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/49560-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1641.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>Chilla, 1954</p>
+  
+</a>
+<a href="/en/artwork/14017-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/KNA 1959.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>gordijnstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/14016-fiesta" class="teaser teasercontent-right teaser-link column" title="Fiesta">
+      
+      <img src="/assets/textiel/KNA 939.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>Fiesta, 1959</p>
+  
+</a>
+<a href="/en/artwork/21452-medusa" class="teaser teasercontent-right teaser-link column" title="Medusa">
+      
+      <img src="/assets/textiel/2003.1.0279az.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Atkinson, Nigel<br>Medusa, 1988</p>
+  
+</a>
+<a href="/en/artwork/10837-bekledingsstof" class="teaser teasercontent-right teaser-link column" title="bekledingsstof">
+      
+      <img src="/assets/textiel/kna 2218(1-4)1.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bazel, K.P.C. de<br>bekledingsstof, 1910</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/68571-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 649.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>kledingstof, 1954</p>
+  
+</a>
+<a href="/en/artwork/14009-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 786.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/14014-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 1998.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>gordijnstof, 1963</p>
+  
+</a>
+<a href="/en/artwork/21451-florentine-leaves" class="teaser teasercontent-right teaser-link column" title="Florentine Leaves">
+      
+      <img src="/assets/textiel/2003.1.0278.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Atkinson, Nigel<br>Florentine Leaves, 1990</p>
+  
+</a>
+<a href="/en/artwork/69322-bekledingsstof" class="teaser teasercontent-right teaser-link column" title="bekledingsstof">
+      
+      <img src="/assets/textiel/KNA 2218(1-4)2.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bazel, K.P.C. de<br>bekledingsstof, 1910</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/4238-lap" class="teaser teasercontent-right teaser-link column" title="lap">
+      
+      <img src="/assets/textiel/KNA 846.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>lap, 1955</p>
+  
+</a>
+<a href="/en/artwork/40173-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 787.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/35816-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/kna 1997.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Appel, Karel<br>gordijnstof, 1963</p>
+  
+</a>
+<a href="/en/artwork/35824-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 793.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Baumeister, Willi<br>gordijnstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/69323-bekledingsstof" class="teaser teasercontent-right teaser-link column" title="bekledingsstof">
+      
+      <img src="/assets/textiel/KNA 2218(1-4)3.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bazel, K.P.C. de<br>bekledingsstof, 1910</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page3">page 3</h4>
+      
+      <div class="newPage" id="page-3">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/69325-bekledingsstof" class="teaser teasercontent-right teaser-link column" title="bekledingsstof">
+      
+      <img src="/assets/textiel/KNA 2218(1-4)4.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bazel, K.P.C. de<br>bekledingsstof, 1910</p>
+  
+</a>
+<a href="/en/artwork/9656-wandkleed" class="teaser teasercontent-right teaser-link column" title="Wandkleed">
+      
+      <img src="/assets/5996_11.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bijlenga, Marian<br>Wandkleed, 1981</p>
+  
+</a>
+<a href="/en/artwork/9661-lap" class="teaser teasercontent-right teaser-link column" title="Lap">
+      
+      <img src="/assets/1992.1.0077.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bijlenga, Marian<br>Lap, 1991</p>
+  
+</a>
+<a href="/en/artwork/94694-zonder-titel" class="teaser teasercontent-right teaser-link column" title="Zonder titel">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0083.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bijlenga, Marian<br>Zonder titel, 1994</p>
+  
+</a>
+<a href="/en/artwork/36335-amsterdam-city-marathon-1991" class="teaser teasercontent-right teaser-link column" title="Amsterdam City Marathon 1991">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Birza, Rob<br>Amsterdam City Marathon 1991, 1991</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/35827-aglaia" class="teaser teasercontent-right teaser-link column" title="Aglaia">
+      
+      <img src="/assets/textiel/kna 6508.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Berger, Otti<br>Aglaia</p>
+  
+</a>
+<a href="/en/artwork/3510-wandkleed" class="teaser teasercontent-right teaser-link column" title="wandkleed">
+      
+      <img src="/assets/KNA 6681.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bijlenga, Marian<br>wandkleed, 1985</p>
+  
+</a>
+<a href="/en/artwork/9662-wandkleed" class="teaser teasercontent-right teaser-link column" title="Wandkleed">
+      
+      <img src="/assets/40063.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bijlenga, Marian<br>Wandkleed, 1992</p>
+  
+</a>
+<a href="/en/artwork/6777-red-dots" class="teaser teasercontent-right teaser-link column" title="Red Dots">
+      
+      <img src="/assets/1999.1.0491.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bijlenga, Marian<br>Red Dots, 1996</p>
+  
+</a>
+<a href="/en/artwork/62-clair-de-lune" class="teaser teasercontent-right teaser-link column" title="Clair de lune">
+      
+      <img src="/assets/KNA 1781.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bissière, Roger André<br>Clair de lune, 1945</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/35828-thalia" class="teaser teasercontent-right teaser-link column" title="Thalia">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Berger, Otti<br>Thalia</p>
+  
+</a>
+<a href="/en/artwork/3511-wandkleed" class="teaser teasercontent-right teaser-link column" title="wandkleed">
+      
+      <img src="/assets/7271_15.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bijlenga, Marian<br>wandkleed, 1985</p>
+  
+</a>
+<a href="/en/artwork/21001-veritable-hollandais" class="teaser teasercontent-right teaser-link column" title="Véritable Hollandais">
+      
+      <img src="/assets/textiel/1994.1.0069.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bijlenga, Marian<br>Véritable Hollandais, 1993</p>
+  
+</a>
+<a href="/en/artwork/36334-amsterdam-city-marathon-1991" class="teaser teasercontent-right teaser-link column" title="Amsterdam City Marathon 1991">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Birza, Rob<br>Amsterdam City Marathon 1991, 1991</p>
+  
+</a>
+<a href="/en/artwork/86512-when-ardour-is-replaced-by-ennui" class="teaser teasercontent-right teaser-link column" title="When Ardour is Replaced by Ennui">
+      
+      <img src="/assets/2007.1.0054(1-25).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Bonin, Cosima von<br>When Ardour is Replaced by Ennui, 2006</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page4">page 4</h4>
+      
+      <div class="newPage" id="page-4">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/80522-nectar" class="teaser teasercontent-right teaser-link column" title="Nectar">
+      
+      <img src="/assets/textiel/2006.2.0001.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Nectar, 2005</p>
+  
+</a>
+<a href="/en/artwork/80525-prince" class="teaser teasercontent-right teaser-link column" title="Prince">
+      
+      <img src="/assets/textiel/2006.2.0004.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Prince, 2005</p>
+  
+</a>
+<a href="/en/artwork/80846-sleeping-rose" class="teaser teasercontent-right teaser-link column" title="Sleeping Rose">
+      
+      <img src="/assets/textiel/2006.2.0007.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Sleeping Rose, 2005</p>
+  
+</a>
+<a href="/en/artwork/84275-happy" class="teaser teasercontent-right teaser-link column" title="Happy">
+      
+      <img src="/assets/textiel/2006.2.0346.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Happy, 2005</p>
+  
+</a>
+<a href="/en/artwork/85052-pressed-flower" class="teaser teasercontent-right teaser-link column" title="Pressed Flower">
+      
+      <img src="/assets/textiel/2006.2.0406.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Pressed Flower, 2005</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/80523-eternal-summer" class="teaser teasercontent-right teaser-link column" title="Eternal Summer">
+      
+      <img src="/assets/textiel/2006.2.0002.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Eternal Summer, 2005</p>
+  
+</a>
+<a href="/en/artwork/80526-cushion-collection" class="teaser teasercontent-right teaser-link column" title="Cushion Collection">
+      
+      <img src="/assets/textiel/2006.2.0005.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Cushion Collection, 2005</p>
+  
+</a>
+<a href="/en/artwork/80847-cushion-collection" class="teaser teasercontent-right teaser-link column" title="Cushion Collection">
+      
+      <img src="/assets/textiel/2006.2.0008.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Cushion Collection, 2005</p>
+  
+</a>
+<a href="/en/artwork/85050-princess" class="teaser teasercontent-right teaser-link column" title="Princess">
+      
+      <img src="/assets/textiel/2006.2.0374.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Princess, 2005</p>
+  
+</a>
+<a href="/en/artwork/8350-gevallen-engel" class="teaser teasercontent-right teaser-link column" title="Gevallen engel">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Buic, Jagoda<br>Gevallen engel, 1967</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/80524-sleeping-rose" class="teaser teasercontent-right teaser-link column" title="Sleeping Rose">
+      
+      <img src="/assets/textiel/2006.2.0003.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Sleeping Rose, 2005</p>
+  
+</a>
+<a href="/en/artwork/80845-wilderness" class="teaser teasercontent-right teaser-link column" title="Wilderness">
+      
+      <img src="/assets/textiel/2006.2.0006.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Wilderness, 2005</p>
+  
+</a>
+<a href="/en/artwork/80849-shadow" class="teaser teasercontent-right teaser-link column" title="Shadow">
+      
+      <img src="/assets/textiel/2006.2.0073.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Shadow, 2005</p>
+  
+</a>
+<a href="/en/artwork/85051-pressed-flower" class="teaser teasercontent-right teaser-link column" title="Pressed Flower">
+      
+      <img src="/assets/textiel/2006.2.0407.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Boontje, Tord<br>Pressed Flower, 2005</p>
+  
+</a>
+<a href="/en/artwork/37180-a-l-ombre-des-reves" class="teaser teasercontent-right teaser-link column" title="A l'ombre des rêves">
+      
+      <img src="/assets/textiel/KNA 608.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Chagall, Marc<br>A l'ombre des rêves, 1956</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page5">page 5</h4>
+      
+      <div class="newPage" id="page-5">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/37181-vue-de-paris" class="teaser teasercontent-right teaser-link column" title="Vue de Paris">
+      
+      <img src="/assets/textiel/KNA 609.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Chagall, Marc<br>Vue de Paris, 1956</p>
+  
+</a>
+<a href="/en/artwork/35887-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 1960.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Constant<br>gordijnstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/37185" class="teaser teasercontent-right teaser-link column" title="-">
+      
+      <img src="/assets/textiel/KNA 1682.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Constant<br>-, 1957</p>
+  
+</a>
+<a href="/en/artwork/37187-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 804.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Corneille<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/37190-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1686.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Corneille<br>Chilla, 1957</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/37182-evening-enchantment" class="teaser teasercontent-right teaser-link column" title="Evening enchantment">
+      
+      <img src="/assets/textiel/KNA 610.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Chagall, Marc<br>Evening enchantment, 1956</p>
+  
+</a>
+<a href="/en/artwork/37183-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 802.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Constant<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/37186-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1683.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Constant<br>Chilla, z.j.</p>
+  
+</a>
+<a href="/en/artwork/37188-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 805.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Corneille<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/37191-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1687.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Corneille<br>Chilla, 1957</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/35702-artisjok" class="teaser teasercontent-right teaser-link column" title="Artisjok">
+      
+      <img src="/assets/textiel/KNA 32.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Colenbrander, Theo<br>Artisjok, 1900</p>
+  
+</a>
+<a href="/en/artwork/37184-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 803.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Constant<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/14020-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 646.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Corneille<br>Chilla, 1954</p>
+  
+</a>
+<a href="/en/artwork/37189-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1685.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Corneille<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/35890-valsterbo-aristo" class="teaser teasercontent-right teaser-link column" title="Valsterbo (aristo)">
+      
+      <img src="/assets/textiel/KNA 1933.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Corneille<br>Valsterbo (aristo), 1964</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page6">page 6</h4>
+      
+      <div class="newPage" id="page-6">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/35795-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 457.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Delaunay, Sonia<br>gordijnstof, 1953</p>
+  
+</a>
+<a href="/en/artwork/37194-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1684.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Diederen, Jef<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/15979-geel-groot" class="teaser teasercontent-right teaser-link column" title="Geel Groot">
+      
+      <img src="/assets/2002.1.0384-387(A).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Driessen, Hil<br>Geel Groot, 2001</p>
+  
+</a>
+<a href="/en/artwork/15982-mega-geel" class="teaser teasercontent-right teaser-link column" title="Mega Geel">
+      
+      <img src="/assets/2002.1.0384-387(A).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Driessen, Hil<br>Mega Geel, 2002</p>
+  
+</a>
+<a href="/en/artwork/35706-sprei" class="teaser teasercontent-right teaser-link column" title="sprei">
+      
+      <img src="/assets/textiel/KNA 1775.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Dufy, Raoul<br>sprei, 1929</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/35997-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 466.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Delaunay, Sonia<br>gordijnstof, 1953</p>
+  
+</a>
+<a href="/en/artwork/35704-landschap" class="teaser teasercontent-right teaser-link column" title="Landschap">
+      
+      <img src="/assets/textiel/KNA 6131.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Doorn, Tinus van<br>Landschap, 1930</p>
+  
+</a>
+<a href="/en/artwork/15980-kussen-in-grijs" class="teaser teasercontent-right teaser-link column" title="Kussen in grijs">
+      
+      <img src="/assets/2002.1.0384-387(A).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Driessen, Hil<br>Kussen in grijs, 2002</p>
+  
+</a>
+<a href="/en/artwork/36000-zwanen" class="teaser teasercontent-right teaser-link column" title="Zwanen">
+      
+      <img src="/assets/textiel/KNA 8849(1-2)1.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Duco Crop, Michel<br>Zwanen, 1894</p>
+  
+</a>
+<a href="/en/artwork/36001-cannes" class="teaser teasercontent-right teaser-link column" title="Cannes">
+      
+      <img src="/assets/textiel/KNA 616.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Dufy, Raoul<br>Cannes, 1956</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/37193-chilber" class="teaser teasercontent-right teaser-link column" title="Chilber">
+      
+      <img src="/assets/textiel/KNA 788.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Diederen, Jef<br>Chilber, 1957</p>
+  
+</a>
+<a href="/en/artwork/35705-tafel-met-bloeiende-cacteeen" class="teaser teasercontent-right teaser-link column" title="Tafel met bloeiende cacteeën">
+      
+      <img src="/assets/textiel/KNA 6132.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Doorn, Tinus van<br>Tafel met bloeiende cacteeën, 1930</p>
+  
+</a>
+<a href="/en/artwork/15981-kussen-in-grijs" class="teaser teasercontent-right teaser-link column" title="Kussen in grijs">
+      
+      <img src="/assets/2002.1.0384-387(A).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Driessen, Hil<br>Kussen in grijs, 2002</p>
+  
+</a>
+<a href="/en/artwork/69348-zwanen" class="teaser teasercontent-right teaser-link column" title="Zwanen">
+      
+      <img src="/assets/textiel/kna 8849(1-2)2.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Duco Crop, Michel<br>Zwanen, 1894</p>
+  
+</a>
+<a href="/en/artwork/35707-kind-met-fiets" class="teaser teasercontent-right teaser-link column" title="Kind met fiets">
+      
+      <img src="/assets/textiel/KNA 2629.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Elffers, Dick<br>Kind met fiets, 1960</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page7">page 7</h4>
+      
+      <div class="newPage" id="page-7">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/35898-canaille" class="teaser teasercontent-right teaser-link column" title="Canaille">
+      
+      <img src="/assets/textiel/kna 1978.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Canaille, 1957</p>
+  
+</a>
+<a href="/en/artwork/36021-champagne" class="teaser teasercontent-right teaser-link column" title="Champagne">
+      
+      <img src="/assets/textiel/KNA 1976(1-2).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Champagne, 1957</p>
+  
+</a>
+<a href="/en/artwork/95280-zebra" class="teaser teasercontent-right teaser-link column" title="Zebra">
+      
+      <img src="/assets/textiel/2013.1.0545.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Zebra, 1965</p>
+  
+</a>
+<a href="/en/artwork/89325-raster-en-structuur" class="teaser teasercontent-right teaser-link column" title="Raster en structuur">
+      
+      <img src="/assets/toegepaste kunst/2008.1.0162.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Raster en structuur, 1973</p>
+  
+</a>
+<a href="/en/artwork/95436-my-woven-diary-1976-9-01-1977-5-31" class="teaser teasercontent-right teaser-link column" title="My Woven Diary 1976.9.01 - 1977.5.31">
+      
+      <img src="/assets/toegepaste kunst/2014.2.0118.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>My Woven Diary 1976.9.01 - 1977.5.31, 1976</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/36019-champagne" class="teaser teasercontent-right teaser-link column" title="Champagne">
+      
+      <img src="/assets/textiel/kna 1974.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Champagne, 1957</p>
+  
+</a>
+<a href="/en/artwork/36022-canaille" class="teaser teasercontent-right teaser-link column" title="Canaille">
+      
+      <img src="/assets/textiel/kna 1977.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Canaille, 1957</p>
+  
+</a>
+<a href="/en/artwork/89279-geweven-raster" class="teaser teasercontent-right teaser-link column" title="Geweven raster">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Geweven raster, 1973</p>
+  
+</a>
+<a href="/en/artwork/89326-raster-en-structuur" class="teaser teasercontent-right teaser-link column" title="Raster en structuur">
+      
+      <img src="/assets/toegepaste kunst/2008.1.0163.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Raster en structuur, 1973</p>
+  
+</a>
+<a href="/en/artwork/95440-geschreven-dagboek-1976" class="teaser teasercontent-right teaser-link column" title="Geschreven dagboek, 1976">
+      
+      <img src="/assets/toegepaste kunst/2014.2.0122.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Geschreven dagboek, 1976, 1976</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/36020-champagne" class="teaser teasercontent-right teaser-link column" title="Champagne">
+      
+      <img src="/assets/textiel/KNA 1975.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Champagne, 1957</p>
+  
+</a>
+<a href="/en/artwork/95437-ontwerp-voor-gordijnstof-ca-1958" class="teaser teasercontent-right teaser-link column" title="Ontwerp voor gordijnstof, ca. 1958">
+      
+      <img src="/assets/toegepaste kunst/2014.1.0124.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Ontwerp voor gordijnstof, ca. 1958, 1958</p>
+  
+</a>
+<a href="/en/artwork/89280-geweven-structuur" class="teaser teasercontent-right teaser-link column" title="Geweven structuur">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Geweven structuur, 1973</p>
+  
+</a>
+<a href="/en/artwork/89327-raster-en-structuur" class="teaser teasercontent-right teaser-link column" title="Raster en structuur">
+      
+      <img src="/assets/toegepaste kunst/2008.1.0164.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Raster en structuur, 1973</p>
+  
+</a>
+<a href="/en/artwork/9633-hij-en-zij-i" class="teaser teasercontent-right teaser-link column" title="Hij en zij I">
+      
+      <img src="/assets/2519_10.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Hij en zij I, 1978</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page8">page 8</h4>
+      
+      <div class="newPage" id="page-8">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/35713-hij-en-zij-ii" class="teaser teasercontent-right teaser-link column" title="Hij en zij II">
+      
+      <img src="/assets/KNA 6768.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Hij en zij II, 1978</p>
+  
+</a>
+<a href="/en/artwork/16385-servet" class="teaser teasercontent-right teaser-link column" title="servet">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>servet, 1990</p>
+  
+</a>
+<a href="/en/artwork/35903-arttu-aristo" class="teaser teasercontent-right teaser-link column" title="Arttu (aristo)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Fontana, Lucio<br>Arttu (aristo), 1964</p>
+  
+</a>
+<a href="/en/artwork/36340" class="teaser teasercontent-right teaser-link column" title="">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Grieshaber, HAP<br>, z.j.</p>
+  
+</a>
+<a href="/en/artwork/69351-dineer-royal" class="teaser teasercontent-right teaser-link column" title="Dineer Royal">
+      
+      <img src="/assets/textiel/2000.1.0678(4).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hans, Ineke<br>Dineer Royal, 1995</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/9840-monochroom-blauw" class="teaser teasercontent-right teaser-link column" title="Monochroom Blauw">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Monochroom Blauw, 1980</p>
+  
+</a>
+<a href="/en/artwork/35901-paavo-aristo" class="teaser teasercontent-right teaser-link column" title="Paavo (aristo)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Fontana, Lucio<br>Paavo (aristo), 1964</p>
+  
+</a>
+<a href="/en/artwork/35904-arttu-aristo" class="teaser teasercontent-right teaser-link column" title="Arttu (aristo)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Fontana, Lucio<br>Arttu (aristo), 1964</p>
+  
+</a>
+<a href="/en/artwork/7492-la-marina" class="teaser teasercontent-right teaser-link column" title="La Marina">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Halldórsdóttir, Gudlang<br>La Marina, 1998</p>
+  
+</a>
+<a href="/en/artwork/35920-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 458.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hertz, Ursula<br>gordijnstof, 1953</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/10043-kleurentotem" class="teaser teasercontent-right teaser-link column" title="Kleurentotem">
+      
+      <img src="/assets/1989.1.0003.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Eyk, Ria van<br>Kleurentotem, 1983</p>
+  
+</a>
+<a href="/en/artwork/35902-paavo-aristo" class="teaser teasercontent-right teaser-link column" title="Paavo (aristo)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Fontana, Lucio<br>Paavo (aristo), 1964</p>
+  
+</a>
+<a href="/en/artwork/35905-furrow" class="teaser teasercontent-right teaser-link column" title="Furrow">
+      
+      <img src="/assets/textiel/KNA 2113.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Fricke, Ellen<br>Furrow, 1959</p>
+  
+</a>
+<a href="/en/artwork/9858-wandkleed-kruisdraging" class="teaser teasercontent-right teaser-link column" title="Wandkleed 'Kruisdraging'">
+      
+      <img src="/assets/20388.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hanf-Weinholt, Ilse<br>Wandkleed 'Kruisdraging', z.j.</p>
+  
+</a>
+<a href="/en/artwork/92377-atacama" class="teaser teasercontent-right teaser-link column" title="Atacama">
+      
+      <img src="/assets/2010.1.0453.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Atacama, 1959</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page9">page 9</h4>
+      
+      <div class="newPage" id="page-9">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/9635-white-letter-ii" class="teaser teasercontent-right teaser-link column" title="White Letter II">
+      
+      <img src="/assets/39918.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>White Letter II, 1961</p>
+  
+</a>
+<a href="/en/artwork/35926-badagara-yellow" class="teaser teasercontent-right teaser-link column" title="Badagara Yellow">
+      
+      <img src="/assets/KNA 9334.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Badagara Yellow, 1966</p>
+  
+</a>
+<a href="/en/artwork/92380-kozhikode" class="teaser teasercontent-right teaser-link column" title="Kozhikode">
+      
+      <img src="/assets/2010.1.0456a.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Kozhikode, 1966</p>
+  
+</a>
+<a href="/en/artwork/92164-the-principal-wife" class="teaser teasercontent-right teaser-link column" title="The Principal Wife">
+      
+      <img src="/assets/toegepaste kunst/2010.7.0270(1-2)1.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>The Principal Wife, 1968</p>
+  
+</a>
+<a href="/en/artwork/9634-reprisage" class="teaser teasercontent-right teaser-link column" title="Reprisage">
+      
+      <img src="/assets/KNA 4455.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Reprisage, 1973</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/92378-marama-minu" class="teaser teasercontent-right teaser-link column" title="Marama Minu">
+      
+      <img src="/assets/2010.1.0454.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Marama Minu, 1961</p>
+  
+</a>
+<a href="/en/artwork/35927-badagara-blue" class="teaser teasercontent-right teaser-link column" title="Badagara Blue">
+      
+      <img src="/assets/KNA 9335.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Badagara Blue, 1966</p>
+  
+</a>
+<a href="/en/artwork/9736-evolving-tapestry-she" class="teaser teasercontent-right teaser-link column" title="Evolving Tapestry: She">
+      
+      <img src="/assets/textiel/1991.2.0283(1-12).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Evolving Tapestry: She, 1967</p>
+  
+</a>
+<a href="/en/artwork/92381-griffe" class="teaser teasercontent-right teaser-link column" title="Griffe">
+      
+      <img src="/assets/textiel/2010.1.0457.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Griffe, 1970</p>
+  
+</a>
+<a href="/en/artwork/9673-vague-verte" class="teaser teasercontent-right teaser-link column" title="Vague verte">
+      
+      <img src="/assets/KNA 3616.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Vague verte, 1974</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/35925-badagara-red" class="teaser teasercontent-right teaser-link column" title="Badagara Red">
+      
+      <img src="/assets/KNA 9333.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Badagara Red, 1966</p>
+  
+</a>
+<a href="/en/artwork/92379-bardos-tronquoy" class="teaser teasercontent-right teaser-link column" title="Bardos Tronquoy">
+      
+      <img src="/assets/2010.1.0455.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Bardos Tronquoy, 1966</p>
+  
+</a>
+<a href="/en/artwork/36341-banisteriopsis" class="teaser teasercontent-right teaser-link column" title="Banisteriopsis">
+      
+      <img src="/assets/textiel/KNA 9336.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Banisteriopsis, 1968</p>
+  
+</a>
+<a href="/en/artwork/9670-trapeze-de-cristobal" class="teaser teasercontent-right teaser-link column" title="Trapèze de Cristobal">
+      
+      <img src="/assets/KNA 3487.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Trapèze de Cristobal, 1971</p>
+  
+</a>
+<a href="/en/artwork/18953-hommage-aan-kho-liang-ie" class="teaser teasercontent-right teaser-link column" title="Hommage aan Kho Liang Ie">
+      
+      <img src="/assets/2016/2003.2.0130(1-6).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Hommage aan Kho Liang Ie, 1975</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page10">page 10</h4>
+      
+      <div class="newPage" id="page-10">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/9734-self-portait-on-a-blue-day" class="teaser teasercontent-right teaser-link column" title="Self Portait on a Blue Day">
+      
+      <img src="/assets/1988.2.0314b.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Self Portait on a Blue Day, 1977</p>
+  
+</a>
+<a href="/en/artwork/9737-family-treasures" class="teaser teasercontent-right teaser-link column" title="Family Treasures">
+      
+      <img src="/assets/2016/1993.2.0318.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Family Treasures, 1993</p>
+  
+</a>
+<a href="/en/artwork/92388-masked-shaman" class="teaser teasercontent-right teaser-link column" title="Masked Shaman">
+      
+      <img src="/assets/2010.2.0461.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Masked Shaman, 2008</p>
+  
+</a>
+<a href="/en/artwork/92383-beaver-domain" class="teaser teasercontent-right teaser-link column" title="Beaver Domain">
+      
+      <img src="/assets/2010.1.0459.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Beaver Domain, 2010</p>
+  
+</a>
+<a href="/en/artwork/95134-speeltuin" class="teaser teasercontent-right teaser-link column" title="Speeltuin">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0370.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Speeltuin, 1964</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/92389-bumps-and-whispers" class="teaser teasercontent-right teaser-link column" title="Bumps and Whispers">
+      
+      <img src="/assets/2010.2.0462.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Bumps and Whispers, 1988</p>
+  
+</a>
+<a href="/en/artwork/92382-the-stranger-ii" class="teaser teasercontent-right teaser-link column" title="The Stranger II">
+      
+      <img src="/assets/textiel/2010.1.0458.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>The Stranger II, 1998</p>
+  
+</a>
+<a href="/en/artwork/92391-trois-pieds-ii" class="teaser teasercontent-right teaser-link column" title="Trois Pieds II">
+      
+      <img src="/assets/2010.2.0464.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Trois Pieds II, 2008</p>
+  
+</a>
+<a href="/en/artwork/92392-with-modest-means" class="teaser teasercontent-right teaser-link column" title="With Modest Means">
+      
+      <img src="/assets/2010.2.0465.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>With Modest Means, 2010</p>
+  
+</a>
+<a href="/en/artwork/95159-weefsel-kleurproef" class="teaser teasercontent-right teaser-link column" title="[weefsel, kleurproef]">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0391.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>[weefsel, kleurproef], 1970</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/696-amour-de-l-ama" class="teaser teasercontent-right teaser-link column" title="Amour de l' Ama">
+      
+      <img src="/assets/textiel/1996.2.0307.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Amour de l' Ama, 1990</p>
+  
+</a>
+<a href="/en/artwork/92390-nearly-there" class="teaser teasercontent-right teaser-link column" title="Nearly There">
+      
+      <img src="/assets/2010.2.0463a.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Nearly There, 2005</p>
+  
+</a>
+<a href="/en/artwork/92384-cluny-saffron" class="teaser teasercontent-right teaser-link column" title="Cluny Saffron">
+      
+      <img src="/assets/textiel/2010.1.0460.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hicks, Sheila<br>Cluny Saffron, 2009</p>
+  
+</a>
+<a href="/en/artwork/95132-bloem" class="teaser teasercontent-right teaser-link column" title="Bloem">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0368.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Bloem, 1959</p>
+  
+</a>
+<a href="/en/artwork/9636-wie-heeft-er-in-mijn-bed-geslapen" class="teaser teasercontent-right teaser-link column" title="Wie heeft er in mijn bed geslapen?">
+      
+      <img src="/assets/39965.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Wie heeft er in mijn bed geslapen?, 1974</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page11">page 11</h4>
+      
+      <div class="newPage" id="page-11">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/95136-schone-zakdoek" class="teaser teasercontent-right teaser-link column" title="Schone zakdoek">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0372.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Schone zakdoek, 1975</p>
+  
+</a>
+<a href="/en/artwork/95153-miniatuur" class="teaser teasercontent-right teaser-link column" title="Miniatuur">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0389.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Miniatuur, 1975</p>
+  
+</a>
+<a href="/en/artwork/9674-geel-kleed" class="teaser teasercontent-right teaser-link column" title="Geel kleed">
+      
+      <img src="/assets/KNA 5424.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Geel kleed, 1978</p>
+  
+</a>
+<a href="/en/artwork/9678-ink-dipped" class="teaser teasercontent-right teaser-link column" title="Ink Dipped">
+      
+      <img src="/assets/39972.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Ink Dipped, 1980</p>
+  
+</a>
+<a href="/en/artwork/95143-hangende-vorm-in-strop" class="teaser teasercontent-right teaser-link column" title="Hangende vorm in strop">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0379.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Hangende vorm in strop, 1984</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/95151-miniatuur" class="teaser teasercontent-right teaser-link column" title="Miniatuur">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0387.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Miniatuur, 1975</p>
+  
+</a>
+<a href="/en/artwork/24823-horizon" class="teaser teasercontent-right teaser-link column" title="Horizon">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Horizon, 1977</p>
+  
+</a>
+<a href="/en/artwork/95137-draaiende-horizon" class="teaser teasercontent-right teaser-link column" title="Draaiende horizon">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0373.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Draaiende horizon, 1978</p>
+  
+</a>
+<a href="/en/artwork/95141-grijze-boog" class="teaser teasercontent-right teaser-link column" title="Grijze boog">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0377.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Grijze boog, 1981</p>
+  
+</a>
+<a href="/en/artwork/4557-irritante-rechthoek" class="teaser teasercontent-right teaser-link column" title="Irritante rechthoek">
+      
+      <img src="/assets/7226_30.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Irritante rechthoek, 1985</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/95152-minaiatuur" class="teaser teasercontent-right teaser-link column" title="Minaiatuur">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0388.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Minaiatuur, 1975</p>
+  
+</a>
+<a href="/en/artwork/35723-replying" class="teaser teasercontent-right teaser-link column" title="Replying">
+      
+      <img src="/assets/textiel/KNA 5321.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Replying, 1977</p>
+  
+</a>
+<a href="/en/artwork/9677-zonder-titel" class="teaser teasercontent-right teaser-link column" title="Zonder titel">
+      
+      <img src="/assets/39964.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Zonder titel, 1979</p>
+  
+</a>
+<a href="/en/artwork/95142-grijzen-en-witten" class="teaser teasercontent-right teaser-link column" title="Grijzen en witten">
+      
+      <img src="/assets/toegepaste kunst/2013.2.0378(1-21).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Horst, Loes van der<br>Grijzen en witten, 1981</p>
+  
+</a>
+<a href="/en/artwork/78237-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 465.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Hoske Ivenick, G.<br>gordijnstof, 1953</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page12">page 12</h4>
+      
+      <div class="newPage" id="page-12">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/35952-graphisme" class="teaser teasercontent-right teaser-link column" title="Graphisme">
+      
+      <img src="/assets/textiel/KNA 1999.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Iribe, Jacqueline<br>Graphisme, 1958</p>
+  
+</a>
+<a href="/en/artwork/6028-vogels-boven-golven" class="teaser teasercontent-right teaser-link column" title="Vogels boven golven">
+      
+      <img src="/assets/Kna 4591.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Jongert, Jac.<br>Vogels boven golven, 1920</p>
+  
+</a>
+<a href="/en/artwork/35731-musikalisches" class="teaser teasercontent-right teaser-link column" title="Musikalisches">
+      
+      <img src="/assets/textiel/KNA 1779.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Kerkovius, Ida<br>Musikalisches, 1954</p>
+  
+</a>
+<a href="/en/artwork/25611-the-netherlands-4-courses" class="teaser teasercontent-right teaser-link column" title="The Netherlands, 4 courses">
+      
+      <img src="/assets/2003.1.0614(1-4).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Kouswijk, Manon van<br>The Netherlands, 4 courses, 2003</p>
+  
+</a>
+<a href="/en/artwork/32821-deux-bouteilles-et-compagnie" class="teaser teasercontent-right teaser-link column" title="Deux bouteilles et compagnie">
+      
+      <img src="/assets/KNA 1782.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Le Corbusier<br>Deux bouteilles et compagnie, 1951</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/36344-shawl" class="teaser teasercontent-right teaser-link column" title="shawl">
+      
+      <img src="/assets/textiel/KNA 4589.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Itten, Johannes<br>shawl, z.j.</p>
+  
+</a>
+<a href="/en/artwork/77712-vloerkleed" class="teaser teasercontent-right teaser-link column" title="vloerkleed">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">K.V.T.<br>vloerkleed, 1925</p>
+  
+</a>
+<a href="/en/artwork/1275-beddensprei" class="teaser teasercontent-right teaser-link column" title="Beddensprei">
+      
+      <img src="/assets/textiel/2000.1.0710.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Killaars, Fransje<br>Beddensprei, 2000</p>
+  
+</a>
+<a href="/en/artwork/25612-the-netherlands-4-courses" class="teaser teasercontent-right teaser-link column" title="The Netherlands, 4 courses">
+      
+      <img src="/assets/2003.1.0614(1-4).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Kouswijk, Manon van<br>The Netherlands, 4 courses, 2003</p>
+  
+</a>
+<a href="/en/artwork/36345-lap" class="teaser teasercontent-right teaser-link column" title="lap">
+      
+      <img src="/assets/toegepaste kunst/KNA 339.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>lap, 1903</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/35727-lap" class="teaser teasercontent-right teaser-link column" title="lap">
+      
+      <img src="/assets/KNB 120.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Jessurun de Mesquita, Samuel<br>lap, 1899</p>
+  
+</a>
+<a href="/en/artwork/35730-festspiele" class="teaser teasercontent-right teaser-link column" title="Festspiele">
+      
+      <img src="/assets/textiel/KNA 1778.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Kerkovius, Ida<br>Festspiele, 1950</p>
+  
+</a>
+<a href="/en/artwork/8144-familie" class="teaser teasercontent-right teaser-link column" title="Familie">
+      
+      <img src="/assets/kna 1780.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Kirchner, Ernst Ludwig<br>Familie, 1923</p>
+  
+</a>
+<a href="/en/artwork/6630-colora" class="teaser teasercontent-right teaser-link column" title="Colora">
+      
+      <img src="/assets/KNA 2103.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Köhler, Jo<br>Colora, 1937</p>
+  
+</a>
+<a href="/en/artwork/17622-tafelkleed" class="teaser teasercontent-right teaser-link column" title="tafelkleed">
+      
+      <img src="/assets/KNB 40.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>tafelkleed, 1904</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page13">page 13</h4>
+      
+      <div class="newPage" id="page-13">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/16405-vlinders" class="teaser teasercontent-right teaser-link column" title="Vlinders">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Vlinders, 1905</p>
+  
+</a>
+<a href="/en/artwork/16409-appel-603" class="teaser teasercontent-right teaser-link column" title="Appel 603">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Appel 603, 1910</p>
+  
+</a>
+<a href="/en/artwork/16388-straalbreking" class="teaser teasercontent-right teaser-link column" title="Straalbreking">
+      
+      <img src="/assets/textiel/KNA 2888.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Straalbreking, 1930</p>
+  
+</a>
+<a href="/en/artwork/16398-straalbreking" class="teaser teasercontent-right teaser-link column" title="Straalbreking">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Straalbreking, 1930</p>
+  
+</a>
+<a href="/en/artwork/36346-spiraalmotief" class="teaser teasercontent-right teaser-link column" title="Spiraalmotief">
+      
+      <img src="/assets/textiel/KNA 2890.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Spiraalmotief, 1930</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/16407-vlinder-dessin-505" class="teaser teasercontent-right teaser-link column" title="Vlinder (dessin 505)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Vlinder (dessin 505), 1905</p>
+  
+</a>
+<a href="/en/artwork/16392-servet" class="teaser teasercontent-right teaser-link column" title="servet">
+      
+      <img src="/assets/textiel/KNA 2891.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>servet, 1924</p>
+  
+</a>
+<a href="/en/artwork/16393-servet" class="teaser teasercontent-right teaser-link column" title="servet">
+      
+      <img src="/assets/textiel/KNA 2892.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>servet, 1930</p>
+  
+</a>
+<a href="/en/artwork/16402-straal-breking" class="teaser teasercontent-right teaser-link column" title="Straal-breking">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Straal-breking, 1930</p>
+  
+</a>
+<a href="/en/artwork/16984-vloerkleed" class="teaser teasercontent-right teaser-link column" title="vloerkleed">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Leck, Bart van der<br>vloerkleed, 1920</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/16391-narcis" class="teaser teasercontent-right teaser-link column" title="Narcis">
+      
+      <img src="/assets/textiel/KNA 2889.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Narcis, 1910</p>
+  
+</a>
+<a href="/en/artwork/16401-hazelaar-tafelkleed-en-twee-servetten" class="teaser teasercontent-right teaser-link column" title="Hazelaar (tafelkleed en twee servetten)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Hazelaar (tafelkleed en twee servetten), 1926</p>
+  
+</a>
+<a href="/en/artwork/16394-doorstraalde-blaeren" class="teaser teasercontent-right teaser-link column" title="Doorstraalde blaeren">
+      
+      <img src="/assets/textiel/KNA 2893.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Doorstraalde blaeren, 1930</p>
+  
+</a>
+<a href="/en/artwork/16404-margotje" class="teaser teasercontent-right teaser-link column" title="Margotje">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lebeau, Chris<br>Margotje, 1930</p>
+  
+</a>
+<a href="/en/artwork/16980-vloerkleed" class="teaser teasercontent-right teaser-link column" title="vloerkleed">
+      
+      <img src="/assets/2014/KNA 1771a.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Leck, Bart van der<br>vloerkleed, 1930</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page14">page 14</h4>
+      
+      <div class="newPage" id="page-14">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/16983-kleedje" class="teaser teasercontent-right teaser-link column" title="Kleedje">
+      
+      <img src="/assets/textiel/KNA 1783.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Leck, Bart van der<br>Kleedje, 1930</p>
+  
+</a>
+<a href="/en/artwork/35981-toreador" class="teaser teasercontent-right teaser-link column" title="Toreador">
+      
+      <img src="/assets/KNA 342.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lion Cachet, Carel Adolph<br>Toreador, 1910</p>
+  
+</a>
+<a href="/en/artwork/35983-ariola" class="teaser teasercontent-right teaser-link column" title="Ariola">
+      
+      <img src="/assets/textiel/kna 1986.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Ariola, 1957</p>
+  
+</a>
+<a href="/en/artwork/37232-gloxinia" class="teaser teasercontent-right teaser-link column" title="Gloxinia">
+      
+      <img src="/assets/textiel/KNA 1704.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Gloxinia, 1960</p>
+  
+</a>
+<a href="/en/artwork/37235-gloxinia" class="teaser teasercontent-right teaser-link column" title="Gloxinia">
+      
+      <img src="/assets/textiel/KNA 1707.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Gloxinia, 1960</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/14043-tapijt" class="teaser teasercontent-right teaser-link column" title="Tapijt">
+      
+      <img src="/assets/KNA 21.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lion Cachet, Carel Adolph<br>Tapijt, 1900</p>
+  
+</a>
+<a href="/en/artwork/34397-ispahan" class="teaser teasercontent-right teaser-link column" title="Ispahan">
+      
+      <img src="/assets/textiel/KNA 2219.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lion Cachet, Carel Adolph<br>Ispahan</p>
+  
+</a>
+<a href="/en/artwork/35984-ariola" class="teaser teasercontent-right teaser-link column" title="Ariola">
+      
+      <img src="/assets/textiel/kna 1987.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Ariola, 1957</p>
+  
+</a>
+<a href="/en/artwork/37233-gloxinia" class="teaser teasercontent-right teaser-link column" title="Gloxinia">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Gloxinia, 1960</p>
+  
+</a>
+<a href="/en/artwork/37236-gloxinia" class="teaser teasercontent-right teaser-link column" title="Gloxinia">
+      
+      <img src="/assets/textiel/KNA 1708.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Gloxinia, 1960</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/35980-ispahan" class="teaser teasercontent-right teaser-link column" title="Ispahan">
+      
+      <img src="/assets/textiel/KNA 341.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lion Cachet, Carel Adolph<br>Ispahan, 1910</p>
+  
+</a>
+<a href="/en/artwork/35982-ariola" class="teaser teasercontent-right teaser-link column" title="Ariola">
+      
+      <img src="/assets/textiel/KNA 1985.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Ariola, 1957</p>
+  
+</a>
+<a href="/en/artwork/37231-gloxinia" class="teaser teasercontent-right teaser-link column" title="Gloxinia">
+      
+      <img src="/assets/textiel/KNA 1703.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Gloxinia, 1960</p>
+  
+</a>
+<a href="/en/artwork/37234-gloxinia" class="teaser teasercontent-right teaser-link column" title="Gloxinia">
+      
+      <img src="/assets/textiel/KNA 1706.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Gloxinia, 1960</p>
+  
+</a>
+<a href="/en/artwork/37237-opalo" class="teaser teasercontent-right teaser-link column" title="Opalo">
+      
+      <img src="/assets/textiel/KNA 1709.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Opalo, 1961</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page15">page 15</h4>
+      
+      <div class="newPage" id="page-15">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/35985-weverij-de-ploeg-65-jaar" class="teaser teasercontent-right teaser-link column" title="Weverij De Ploeg 65 jaar">
+      
+      <img src="/assets/textiel/1989.2.0322.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Loon, Johan van<br>Weverij De Ploeg 65 jaar, 1989</p>
+  
+</a>
+<a href="/en/artwork/37230-parade-sauvage" class="teaser teasercontent-right teaser-link column" title="Parade Sauvage">
+      
+      <img src="/assets/textiel/KNA 1660.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Léger, Fernand<br>Parade Sauvage, 1955</p>
+  
+</a>
+<a href="/en/artwork/37249-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 815.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Messel, Diny van<br>kledingstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/37252-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 1677.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Messel, Diny van<br>kledingstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/37255-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 794.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Metz &amp; Co<br>kledingstof, 1955</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/35986-le-tapageur" class="teaser teasercontent-right teaser-link column" title="Le Tapageur">
+      
+      <img src="/assets/toegepaste kunst/KNA 6215.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Lurçat, Jean<br>Le Tapageur, 1957</p>
+  
+</a>
+<a href="/en/artwork/37229-the-circus" class="teaser teasercontent-right teaser-link column" title="The Circus">
+      
+      <img src="/assets/textiel/KNA 607.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Léger, Fernand<br>The Circus, 1956</p>
+  
+</a>
+<a href="/en/artwork/37250-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 1675.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Messel, Diny van<br>kledingstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/37253-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 1678.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Messel, Diny van<br>kledingstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/37256-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 1680.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Metz &amp; Co<br>kledingstof, 1955</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/37228-parade-sauvage" class="teaser teasercontent-right teaser-link column" title="Parade Sauvage">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Léger, Fernand<br>Parade Sauvage, 1955</p>
+  
+</a>
+<a href="/en/artwork/37248-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 814.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Messel, Diny van<br>kledingstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/37251-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 1676.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Messel, Diny van<br>kledingstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/37254-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 1679.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Messel, Diny van<br>kledingstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/37257-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/KNA 1681.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Metz &amp; Co<br>kledingstof, 1955</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page16">page 16</h4>
+      
+      <div class="newPage" id="page-16">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/35745-reliefkleed" class="teaser teasercontent-right teaser-link column" title="Reliëfkleed">
+      
+      <img src="/assets/KNA 686.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>Reliëfkleed, 1934</p>
+  
+</a>
+<a href="/en/artwork/16412-glasdoek-progressieve-randen-in-rood-en-blauw-dessin-no-400" class="teaser teasercontent-right teaser-link column" title="Glasdoek progressieve randen in rood en blauw (dessin no. 400)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>Glasdoek progressieve randen in rood en blauw (..., 1935</p>
+  
+</a>
+<a href="/en/artwork/16419-handdoek-met-versprongen-driehoeksmotief-en-smalle-rand-in-4-kleuren-dessin-no-405" class="teaser teasercontent-right teaser-link column" title="Handdoek met versprongen driehoeksmotief en smalle rand in 4 kleuren (dessin no. 405)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>Handdoek met versprongen driehoeksmotief en sma..., 1936</p>
+  
+</a>
+<a href="/en/artwork/16416-dessinno-1317" class="teaser teasercontent-right teaser-link column" title="(dessinno. 1317)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>(dessinno. 1317), 1937</p>
+  
+</a>
+<a href="/en/artwork/16422-theedoek" class="teaser teasercontent-right teaser-link column" title="theedoek">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>theedoek, 1939</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/16410-glasdoek-progressieve-randen-dessin-no-400" class="teaser teasercontent-right teaser-link column" title="Glasdoek progressieve randen (dessin no. 400)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>Glasdoek progressieve randen (dessin no. 400), 1935</p>
+  
+</a>
+<a href="/en/artwork/16415-glasdoek-progressieve-randen-in-rood-en-blauw-dessin-no-400" class="teaser teasercontent-right teaser-link column" title="Glasdoek progressieve randen in rood en blauw (dessin no. 400)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>Glasdoek progressieve randen in rood en blauw (..., 1935</p>
+  
+</a>
+<a href="/en/artwork/16420-handdoek-met-versprongen-driehoeksmotief-en-smalle-rand-in-4-kleuren-dessin-no-405" class="teaser teasercontent-right teaser-link column" title="Handdoek met versprongen driehoeksmotief en smalle rand in 4 kleuren (dessin no. 405)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>Handdoek met versprongen driehoeksmotief en sma..., 1936</p>
+  
+</a>
+<a href="/en/artwork/16417-theedoek" class="teaser teasercontent-right teaser-link column" title="theedoek">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>theedoek, 1937</p>
+  
+</a>
+<a href="/en/artwork/16488-theedoek" class="teaser teasercontent-right teaser-link column" title="theedoek">
+      
+      <img src="/assets/1987.2.0123-124a.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>theedoek, 1939</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/16411-glasdoek-progressieve-randen-in-rood-en-blauw-dessin-no-400" class="teaser teasercontent-right teaser-link column" title="Glasdoek progressieve randen in rood en blauw (dessin no. 400)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>Glasdoek progressieve randen in rood en blauw (..., 1935</p>
+  
+</a>
+<a href="/en/artwork/16418-handdoek-met-versprongen-driehoeksmotief-en-smalle-rand-in-4-kleuren-dessin-no-405" class="teaser teasercontent-right teaser-link column" title="Handdoek met versprongen driehoeksmotief en smalle rand in 4 kleuren (dessin no. 405)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>Handdoek met versprongen driehoeksmotief en sma..., 1936</p>
+  
+</a>
+<a href="/en/artwork/29951-oogst" class="teaser teasercontent-right teaser-link column" title="Oogst">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>Oogst, 1936</p>
+  
+</a>
+<a href="/en/artwork/16496-dessinno-1317" class="teaser teasercontent-right teaser-link column" title="(dessinno. 1317)">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>(dessinno. 1317), 1937</p>
+  
+</a>
+<a href="/en/artwork/16421-theedoek" class="teaser teasercontent-right teaser-link column" title="theedoek">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>theedoek, 1945</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page17">page 17</h4>
+      
+      <div class="newPage" id="page-17">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/16423-theedoek" class="teaser teasercontent-right teaser-link column" title="theedoek">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>theedoek, 1945</p>
+  
+</a>
+<a href="/en/artwork/37262-textures" class="teaser teasercontent-right teaser-link column" title="Textures">
+      
+      <img src="/assets/textiel/KNA 611.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Miró, Joan<br>Textures, 1956</p>
+  
+</a>
+<a href="/en/artwork/37270-gloxinia" class="teaser teasercontent-right teaser-link column" title="Gloxinia">
+      
+      <img src="/assets/textiel/kna 1712.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Gloxinia, 1960</p>
+  
+</a>
+<a href="/en/artwork/37273-cosmos" class="teaser teasercontent-right teaser-link column" title="Cosmos">
+      
+      <img src="/assets/textiel/kna 1715.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Cosmos, 1961</p>
+  
+</a>
+<a href="/en/artwork/37276-alistra" class="teaser teasercontent-right teaser-link column" title="Alistra">
+      
+      <img src="/assets/textiel/kna 1718.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Alistra, 1961</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/30289-wheel-of-fortune" class="teaser teasercontent-right teaser-link column" title="wheel of fortune">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Mijll Dekker, Kitty van der<br>wheel of fortune, 1972-08</p>
+  
+</a>
+<a href="/en/artwork/37263-textures" class="teaser teasercontent-right teaser-link column" title="Textures">
+      
+      <img src="/assets/textiel/KNA 612.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Miró, Joan<br>Textures, 1956</p>
+  
+</a>
+<a href="/en/artwork/37271-artifo" class="teaser teasercontent-right teaser-link column" title="Artifo">
+      
+      <img src="/assets/textiel/kna 1713.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Artifo, 1961</p>
+  
+</a>
+<a href="/en/artwork/37274-portulaca" class="teaser teasercontent-right teaser-link column" title="Portulaca">
+      
+      <img src="/assets/textiel/kna 1716.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Portulaca, 1961</p>
+  
+</a>
+<a href="/en/artwork/37277-guta" class="teaser teasercontent-right teaser-link column" title="Guta">
+      
+      <img src="/assets/textiel/kna 1719.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Guta, 1961</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/35996-mural" class="teaser teasercontent-right teaser-link column" title="Mural">
+      
+      <img src="/assets/textiel/kna 615.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Miró, Joan<br>Mural, 1955</p>
+  
+</a>
+<a href="/en/artwork/37264-woman-and-birds" class="teaser teasercontent-right teaser-link column" title="Woman and Birds">
+      
+      <img src="/assets/textiel/KNA 613.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Miró, Joan<br>Woman and Birds, 1956</p>
+  
+</a>
+<a href="/en/artwork/37272-luvari" class="teaser teasercontent-right teaser-link column" title="Luvari">
+      
+      <img src="/assets/textiel/kna 1714.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Luvari, 1961</p>
+  
+</a>
+<a href="/en/artwork/37275-portulaca" class="teaser teasercontent-right teaser-link column" title="Portulaca">
+      
+      <img src="/assets/textiel/kna 1717.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Portulaca, 1961</p>
+  
+</a>
+<a href="/en/artwork/37278-miria" class="teaser teasercontent-right teaser-link column" title="Miria">
+      
+      <img src="/assets/textiel/kna 1720.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Miria, 1961</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page18">page 18</h4>
+      
+      <div class="newPage" id="page-18">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/37279-miria" class="teaser teasercontent-right teaser-link column" title="Miria">
+      
+      <img src="/assets/textiel/kna 1721.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Miria, 1961</p>
+  
+</a>
+<a href="/en/artwork/37282-undula" class="teaser teasercontent-right teaser-link column" title="Undula">
+      
+      <img src="/assets/textiel/kna 1724.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Undula, 1961</p>
+  
+</a>
+<a href="/en/artwork/36024-piona" class="teaser teasercontent-right teaser-link column" title="Piona">
+      
+      <img src="/assets/textiel/KNA 2110.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Piona, 1964</p>
+  
+</a>
+<a href="/en/artwork/923-1-2-3-jurk-catarina" class="teaser teasercontent-right teaser-link column" title="1-2-3-jurk Catarina">
+      
+      <img src="/assets/textiel/1996.2.0344(1-2)1.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>1-2-3-jurk Catarina, 1968</p>
+  
+</a>
+<a href="/en/artwork/1976-1-2-3-jurk-barbara" class="teaser teasercontent-right teaser-link column" title="1-2-3-jurk Barbara">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>1-2-3-jurk Barbara, 1968</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/37280-razetta" class="teaser teasercontent-right teaser-link column" title="Razetta">
+      
+      <img src="/assets/textiel/kna 1722.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Razetta, 1961</p>
+  
+</a>
+<a href="/en/artwork/37283-arabus" class="teaser teasercontent-right teaser-link column" title="Arabus">
+      
+      <img src="/assets/textiel/kna 1725.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Arabus, 1961</p>
+  
+</a>
+<a href="/en/artwork/17808-exelsa" class="teaser teasercontent-right teaser-link column" title="Exelsa">
+      
+      <img src="/assets/textiel/KNA 2945.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Exelsa, 1966</p>
+  
+</a>
+<a href="/en/artwork/924-1-2-3-jurk-cynthia" class="teaser teasercontent-right teaser-link column" title="1-2-3-jurk Cynthia">
+      
+      <img src="/assets/textiel/1996.2.0345(1-2)1.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>1-2-3-jurk Cynthia, 1968</p>
+  
+</a>
+<a href="/en/artwork/1977-barbara" class="teaser teasercontent-right teaser-link column" title="Barbara">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Barbara, 1968</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/37281-razetta" class="teaser teasercontent-right teaser-link column" title="Razetta">
+      
+      <img src="/assets/textiel/kna 1723.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Razetta, 1961</p>
+  
+</a>
+<a href="/en/artwork/37284-arabus" class="teaser teasercontent-right teaser-link column" title="Arabus">
+      
+      <img src="/assets/textiel/kna 1726.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Arabus, 1961</p>
+  
+</a>
+<a href="/en/artwork/36025-gordia" class="teaser teasercontent-right teaser-link column" title="Gordia">
+      
+      <img src="/assets/textiel/KNA 2946.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Gordia, 1966</p>
+  
+</a>
+<a href="/en/artwork/925-1-2-3-jurk" class="teaser teasercontent-right teaser-link column" title="1-2-3-jurk">
+      
+      <img src="/assets/textiel/1996.2.0346.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>1-2-3-jurk, 1968</p>
+  
+</a>
+<a href="/en/artwork/36026-mosaic" class="teaser teasercontent-right teaser-link column" title="Mosaic">
+      
+      <img src="/assets/textiel/KNA 7911.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Mosaic, 1984</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page19">page 19</h4>
+      
+      <div class="newPage" id="page-19">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/36029-terrazzo" class="teaser teasercontent-right teaser-link column" title="Terrazzo">
+      
+      <img src="/assets/textiel/1989.2.0203.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Terrazzo, 1984</p>
+  
+</a>
+<a href="/en/artwork/36028-avalon" class="teaser teasercontent-right teaser-link column" title="Avalon">
+      
+      <img src="/assets/textiel/1988.1.0043.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Avalon, 1986</p>
+  
+</a>
+<a href="/en/artwork/21389-candidus" class="teaser teasercontent-right teaser-link column" title="Candidus">
+      
+      <img src="/assets/1995.1.0225.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Candidus, 1995</p>
+  
+</a>
+<a href="/en/artwork/21402-lunaris" class="teaser teasercontent-right teaser-link column" title="Lunaris">
+      
+      <img src="/assets/1995.1.0224.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Lunaris, 1995</p>
+  
+</a>
+<a href="/en/artwork/72175-weverij-de-ploeg-65-jaar-past-present-future" class="teaser teasercontent-right teaser-link column" title="Weverij De Ploeg 65 jaar. Past, present, future">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Weverij De Ploeg 65 jaar. Past, present, future</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/36030-carara" class="teaser teasercontent-right teaser-link column" title="Carara">
+      
+      <img src="/assets/textiel/1989.2.0204.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Carara, 1984</p>
+  
+</a>
+<a href="/en/artwork/21346-paradisis" class="teaser teasercontent-right teaser-link column" title="Paradisis">
+      
+      <img src="/assets/textiel/1993.1.0018.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Paradisis, 1992</p>
+  
+</a>
+<a href="/en/artwork/21399-uris" class="teaser teasercontent-right teaser-link column" title="Uris">
+      
+      <img src="/assets/textiel/1995.1.0222.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Uris, 1995</p>
+  
+</a>
+<a href="/en/artwork/77754-titan" class="teaser teasercontent-right teaser-link column" title="Titan">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Titan, z.j.</p>
+  
+</a>
+<a href="/en/artwork/72176-weverij-de-ploeg-65-jaar-past-present-future" class="teaser teasercontent-right teaser-link column" title="Weverij De Ploeg 65 jaar. Past, present, future">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Weverij De Ploeg 65 jaar. Past, present, future</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/36027-carax" class="teaser teasercontent-right teaser-link column" title="Carax">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Carax, 1986</p>
+  
+</a>
+<a href="/en/artwork/21442-saturn" class="teaser teasercontent-right teaser-link column" title="Saturn">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Saturn, 1992</p>
+  
+</a>
+<a href="/en/artwork/21401-laguna" class="teaser teasercontent-right teaser-link column" title="Laguna">
+      
+      <img src="/assets/1995.1.0223.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Laguna, 1995</p>
+  
+</a>
+<a href="/en/artwork/36031-weverij-de-ploeg-65-jaar-past-present-future" class="teaser teasercontent-right teaser-link column" title="Weverij De Ploeg 65 jaar. Past, present, future">
+      
+      <img src="/assets/textiel/1989.2.0325(1-3).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Moritz, Ulf<br>Weverij De Ploeg 65 jaar. Past, present, future</p>
+  
+</a>
+<a href="/en/artwork/2116-bird" class="teaser teasercontent-right teaser-link column" title="Bird">
+      
+      <img src="/assets/KNB 117.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Morris, William<br>Bird, 1878</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page20">page 20</h4>
+      
+      <div class="newPage" id="page-20">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/36032-strawberry-thief" class="teaser teasercontent-right teaser-link column" title="Strawberry thief">
+      
+      <img src="/assets/textiel/KNA 1819.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Morris, William<br>Strawberry thief, 1883</p>
+  
+</a>
+<a href="/en/artwork/73287-jouir" class="teaser teasercontent-right teaser-link column" title="Jouir">
+      
+      <img src="/assets/grafische vormgeving/TYP 04736.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Ne Pas Plier<br>Jouir, z.j.</p>
+  
+</a>
+<a href="/en/artwork/58763-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_20.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+<a href="/en/artwork/60440-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_26.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+<a href="/en/artwork/60515-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_25.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/3054-wandle" class="teaser teasercontent-right teaser-link column" title="Wandle">
+      
+      <img src="/assets/KNB 116.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Morris, William<br>Wandle, 1884</p>
+  
+</a>
+<a href="/en/artwork/73288-ne-pas-plier-s-v-p" class="teaser teasercontent-right teaser-link column" title="Ne Pas Plier       s.v.p.">
+      
+      <img src="/assets/grafische vormgeving/TYP 04737.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Ne Pas Plier<br>Ne Pas Plier       s.v.p., z.j.</p>
+  
+</a>
+<a href="/en/artwork/58773-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_21.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+<a href="/en/artwork/60500-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_23.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+<a href="/en/artwork/60881-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_27.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/73286-t-r-a-a-r-t" class="teaser teasercontent-right teaser-link column" title="T R A           A R T">
+      
+      <img src="/assets/grafische vormgeving/TYP 04735.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Ne Pas Plier<br>T R A           A R T, z.j.</p>
+  
+</a>
+<a href="/en/artwork/73290-utopiste-debout" class="teaser teasercontent-right teaser-link column" title="UTOPISTE      debout">
+      
+      <img src="/assets/grafische vormgeving/TYP 04738.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Ne Pas Plier<br>UTOPISTE      debout, z.j.</p>
+  
+</a>
+<a href="/en/artwork/58774-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_22.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+<a href="/en/artwork/60505-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_24.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+<a href="/en/artwork/60888-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_28.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page21">page 21</h4>
+      
+      <div class="newPage" id="page-21">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/60897-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_36.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60903-zonder-titel" class="teaser teasercontent-right teaser-link column" title="(Zonder titel)">
+      
+      <img src="/assets/textiel/1988.1.0276_29.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>(Zonder titel), 1900</p>
+  
+</a>
+<a href="/en/artwork/60907-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_37.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60912-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_39.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60920-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_61.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/60899-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_30.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60904-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_35.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60908-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_31.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60914-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_64.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60921-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_60.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/60901-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_32.04.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60905-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_34.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60911-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_33.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60919-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60923-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_64.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page22">page 22</h4>
+      
+      <div class="newPage" id="page-22">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/60925-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_55.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61021-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_40.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61025-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_61.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61030-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_54.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61034-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_56.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/60926-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_49.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61022-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_40.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61027-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_67.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61031-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_50.03.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61037-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_69.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/60927-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_65.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61024-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_59.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61028-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_66.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61033-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_57.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61039-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_58.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page23">page 23</h4>
+      
+      <div class="newPage" id="page-23">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/61040-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_58.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61045-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_68.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61054-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_48.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61062-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_62.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61067-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_48.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/61042-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_48.03.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61046-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_41.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61057-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_51.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61065-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_41.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61068-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_50.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/61043-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_48.04.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61048-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_46.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61060-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_52.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61066-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_53.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61072-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_62.03.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page24">page 24</h4>
+      
+      <div class="newPage" id="page-24">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/61074-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_50.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61078-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_45.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61083-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_43.03.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61086-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_43.04.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61092-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_47.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/61075-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_62.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61079-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_45.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61084-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_43.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61089-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_63.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61093-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_44.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/61076-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_47.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61081-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_49.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61085-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_43.01.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61090-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_44.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61712-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page25">page 25</h4>
+      
+      <div class="newPage" id="page-25">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/61729-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.03.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61732-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.06.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61735-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.09.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61874-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_46.03.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61877-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_46.06.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/61730-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.04.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61733-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.07.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61736-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.10.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61875-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_46.04.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/60896-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_38.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1925</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/61731-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.05.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61734-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_42.08.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61873-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_46.02.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/61876-staal-monster" class="teaser teasercontent-right teaser-link column" title="staal [monster]">
+      
+      <img src="/assets/textiel/1988.1.0276_46.05.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Nieuwenhuis, Theo<br>staal [monster], 1900</p>
+  
+</a>
+<a href="/en/artwork/9982-tapisserie" class="teaser teasercontent-right teaser-link column" title="Tapisserie">
+      
+      <img src="/assets/39306.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">O'Brien, Robert<br>Tapisserie, 1988</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page26">page 26</h4>
+      
+      <div class="newPage" id="page-26">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/36110-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 888.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Onbekend<br>gordijnstof, 1953</p>
+  
+</a>
+<a href="/en/artwork/36094-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 585.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Onbekend<br>gordijnstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/36097-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 588.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Onbekend<br>gordijnstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/24799-mira-scheibe-mittel" class="teaser teasercontent-right teaser-link column" title="MIRA-SCHEIBE-MITTEL">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>MIRA-SCHEIBE-MITTEL, 1969</p>
+  
+</a>
+<a href="/en/artwork/24803-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/36111-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 889.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Onbekend<br>gordijnstof, 1953</p>
+  
+</a>
+<a href="/en/artwork/36095-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 586.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Onbekend<br>gordijnstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/36113-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 891.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Onbekend<br>gordijnstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/24800-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/24804-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/36112-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 890.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Onbekend<br>gordijnstof, 1953</p>
+  
+</a>
+<a href="/en/artwork/36096-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/textiel/KNA 587.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Onbekend<br>gordijnstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/24798-mira-scheibe-mittel" class="teaser teasercontent-right teaser-link column" title="MIRA-SCHEIBE-MITTEL">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>MIRA-SCHEIBE-MITTEL, 1969</p>
+  
+</a>
+<a href="/en/artwork/24801-mira-kurven-mittel" class="teaser teasercontent-right teaser-link column" title="Mira-kurven-mittel">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira-kurven-mittel, 1969</p>
+  
+</a>
+<a href="/en/artwork/24805-mira-viereck-gross" class="teaser teasercontent-right teaser-link column" title="Mira-viereck-gross">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira-viereck-gross, 1969</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page27">page 27</h4>
+      
+      <div class="newPage" id="page-27">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/24813-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/24817-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/24820-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/71029-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/71045-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/24814-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/24818-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/71027-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/71030-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/71046-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/24815-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/24819-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/71028-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/71032-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+<a href="/en/artwork/71047-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1969</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page28">page 28</h4>
+      
+      <div class="newPage" id="page-28">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/24791-fancy" class="teaser teasercontent-right teaser-link column" title="Fancy">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Fancy, 1972</p>
+  
+</a>
+<a href="/en/artwork/71036-mira-secura" class="teaser teasercontent-right teaser-link column" title="Mira Secura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira Secura, 1978</p>
+  
+</a>
+<a href="/en/artwork/24792-mira-secura" class="teaser teasercontent-right teaser-link column" title="Mira Secura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira Secura, 1980</p>
+  
+</a>
+<a href="/en/artwork/24808-mira-frescura" class="teaser teasercontent-right teaser-link column" title="MIRA-Frescura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>MIRA-Frescura, 1981</p>
+  
+</a>
+<a href="/en/artwork/24811-mira-frescura" class="teaser teasercontent-right teaser-link column" title="Mira-Frescura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira-Frescura, 1981</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/24816-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>gordijnstof, 1972</p>
+  
+</a>
+<a href="/en/artwork/71038-mira-secura" class="teaser teasercontent-right teaser-link column" title="Mira Secura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira Secura, 1978</p>
+  
+</a>
+<a href="/en/artwork/71039-mira-secura" class="teaser teasercontent-right teaser-link column" title="Mira Secura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira Secura, 1980</p>
+  
+</a>
+<a href="/en/artwork/24809-mira-frescura" class="teaser teasercontent-right teaser-link column" title="MIRA-Frescura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>MIRA-Frescura, 1981</p>
+  
+</a>
+<a href="/en/artwork/24812-mira-mago" class="teaser teasercontent-right teaser-link column" title="Mira Mago">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira Mago, 1981</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/24796-mira-secura" class="teaser teasercontent-right teaser-link column" title="Mira Secura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira Secura, 1978</p>
+  
+</a>
+<a href="/en/artwork/24807-mira-menuett" class="teaser teasercontent-right teaser-link column" title="MIRA-Menuett">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>MIRA-Menuett, 1979</p>
+  
+</a>
+<a href="/en/artwork/71040-mira-secura" class="teaser teasercontent-right teaser-link column" title="Mira Secura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira Secura, 1980</p>
+  
+</a>
+<a href="/en/artwork/24810-mira-frescura" class="teaser teasercontent-right teaser-link column" title="Mira-Frescura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira-Frescura, 1981</p>
+  
+</a>
+<a href="/en/artwork/71042-mira-mago" class="teaser teasercontent-right teaser-link column" title="Mira Mago">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira Mago, 1981</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page29">page 29</h4>
+      
+      <div class="newPage" id="page-29">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/71044-mira-frescura" class="teaser teasercontent-right teaser-link column" title="Mira-Frescura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Panton, Verner<br>Mira-Frescura, 1981</p>
+  
+</a>
+<a href="/en/artwork/4236-guitare" class="teaser teasercontent-right teaser-link column" title="Guitare">
+      
+      <img src="/assets/textiel/kna 2171.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Picasso, Pablo<br>Guitare, 1956</p>
+  
+</a>
+<a href="/en/artwork/16322-studio" class="teaser teasercontent-right teaser-link column" title="Studio">
+      
+      <img src="/assets/KNA 2170.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Picasso, Pablo<br>Studio, 1956</p>
+  
+</a>
+<a href="/en/artwork/37287-the-rooster" class="teaser teasercontent-right teaser-link column" title="The Rooster">
+      
+      <img src="/assets/textiel/KNA 604.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Picasso, Pablo<br>The Rooster, 1956</p>
+  
+</a>
+<a href="/en/artwork/6-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/kna 916a.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Premsela, Benno<br>gordijnstof, 1954</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/17554-tree-of-death" class="teaser teasercontent-right teaser-link column" title="Tree of Death">
+      
+      <img src="/assets/2003.1.0001.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Perry, Grayson<br>Tree of Death, 1997</p>
+  
+</a>
+<a href="/en/artwork/4563-guitare" class="teaser teasercontent-right teaser-link column" title="Guitare">
+      
+      <img src="/assets/textiel/KNA 618.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Picasso, Pablo<br>Guitare, 1956</p>
+  
+</a>
+<a href="/en/artwork/37285-spring" class="teaser teasercontent-right teaser-link column" title="Spring">
+      
+      <img src="/assets/textiel/KNA 603.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Picasso, Pablo<br>Spring, 1956</p>
+  
+</a>
+<a href="/en/artwork/37288-the-turtle-dove" class="teaser teasercontent-right teaser-link column" title="The Turtle Dove">
+      
+      <img src="/assets/textiel/KNA 605.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Picasso, Pablo<br>The Turtle Dove, 1956</p>
+  
+</a>
+<a href="/en/artwork/36169-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/KNA 917.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Premsela, Benno<br>gordijnstof, 1954</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/92486-studio" class="teaser teasercontent-right teaser-link column" title="Studio">
+      
+      <img src="/assets/textiel/2011.2.0017.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Picasso, Pablo<br>Studio, 1955</p>
+  
+</a>
+<a href="/en/artwork/16321-studio" class="teaser teasercontent-right teaser-link column" title="Studio">
+      
+      <img src="/assets/textiel/KNA 617.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Picasso, Pablo<br>Studio, 1956</p>
+  
+</a>
+<a href="/en/artwork/37286-spring" class="teaser teasercontent-right teaser-link column" title="Spring">
+      
+      <img src="/assets/textiel/KNA 602.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Picasso, Pablo<br>Spring, 1956</p>
+  
+</a>
+<a href="/en/artwork/9971-tartan" class="teaser teasercontent-right teaser-link column" title="Tartan">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Poncelet, Jacqui<br>Tartan, 1992</p>
+  
+</a>
+<a href="/en/artwork/36170-no-1402-2" class="teaser teasercontent-right teaser-link column" title="No. 1402/2">
+      
+      <img src="/assets/textiel/KNA 3253.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Premsela, Benno<br>No. 1402/2, 1970</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page30">page 30</h4>
+      
+      <div class="newPage" id="page-30">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/36171-no-1403-7" class="teaser teasercontent-right teaser-link column" title="No. 1403/7">
+      
+      <img src="/assets/textiel/KNA 3254.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Premsela, Benno<br>No. 1403/7, 1970</p>
+  
+</a>
+<a href="/en/artwork/95612-chilla-dessin-26-5317" class="teaser teasercontent-right teaser-link column" title="Chilla (dessin 26/5317)">
+      
+      <img src="/assets/textiel/2014.2.0213(1-5).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla (dessin 26/5317), 0000</p>
+  
+</a>
+<a href="/en/artwork/21381-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/toegepaste kunst/1995.2.0265.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/37307-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1694.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/21380-beryl" class="teaser teasercontent-right teaser-link column" title="Beryl">
+      
+      <img src="/assets/toegepaste kunst/1995.2.0266.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Beryl, 1958</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/95610-chilla-dessin-27-5147" class="teaser teasercontent-right teaser-link column" title="Chilla (dessin  27/5147)">
+      
+      <img src="/assets/textiel/2014.2.0211(1-7).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla (dessin  27/5147), 0000</p>
+  
+</a>
+<a href="/en/artwork/95613-chilla-dessin-28-5325" class="teaser teasercontent-right teaser-link column" title="Chilla (dessin 28/5325)">
+      
+      <img src="/assets/textiel/2014.2.0214(1-7).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla (dessin 28/5325), 0000</p>
+  
+</a>
+<a href="/en/artwork/37305-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 782.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/37308-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1695.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/95617-boreale-dessin-34-0662-1-6" class="teaser teasercontent-right teaser-link column" title="Boreale (dessin 34/0662/1-6)">
+      
+      <img src="/assets/textiel/2014.2.0218(1-6).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Boreale (dessin 34/0662/1-6), 1960</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/95611-chilla-dessin-26-5204" class="teaser teasercontent-right teaser-link column" title="Chilla (dessin 26/5204)">
+      
+      <img src="/assets/textiel/2014.2.0212(1-8).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla (dessin 26/5204), 0000</p>
+  
+</a>
+<a href="/en/artwork/95614-kledingstof" class="teaser teasercontent-right teaser-link column" title="kledingstof">
+      
+      <img src="/assets/textiel/2014.2.0215.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>kledingstof, 1955</p>
+  
+</a>
+<a href="/en/artwork/37306-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 783.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/37309-chilla" class="teaser teasercontent-right teaser-link column" title="Chilla">
+      
+      <img src="/assets/textiel/KNA 1696.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Chilla, 1957</p>
+  
+</a>
+<a href="/en/artwork/95615-agathe-dessin-37-0200-1-4" class="teaser teasercontent-right teaser-link column" title="Agathe (dessin 37/0200/1-4)">
+      
+      <img src="/assets/textiel/2014.2.0216(1-4).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Agathe (dessin 37/0200/1-4), 1962</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page31">page 31</h4>
+      
+      <div class="newPage" id="page-31">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/95616-beryl-dessin-38-0199-4-5-12" class="teaser teasercontent-right teaser-link column" title="Beryl (dessin 38/0199/4, 5,12)">
+      
+      <img src="/assets/textiel/2014.2.0217(1-4).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Reinhold, Nono<br>Beryl (dessin 38/0199/4, 5,12), 1963</p>
+  
+</a>
+<a href="/en/artwork/95198-gedraaide-cirkel" class="teaser teasercontent-right teaser-link column" title="Gedraaide cirkel">
+      
+      <img src="/assets/2014.2.0001.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rolf, Margot<br>Gedraaide cirkel, 1973</p>
+  
+</a>
+<a href="/en/artwork/35768-uitgaande-van-4-kleuren-serie-2-xi-1" class="teaser teasercontent-right teaser-link column" title="Uitgaande van 4 kleuren, serie 2, XI-1">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rolf, Margot<br>Uitgaande van 4 kleuren, serie 2, XI-1, 1980</p>
+  
+</a>
+<a href="/en/artwork/16451-theedoek" class="teaser teasercontent-right teaser-link column" title="theedoek">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rolf, Margot<br>theedoek, 1982</p>
+  
+</a>
+<a href="/en/artwork/9639-grijs" class="teaser teasercontent-right teaser-link column" title="Grijs">
+      
+      <img src="/assets/KNA 3644.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Désirée<br>Grijs, 1974</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/36357-divankleed" class="teaser teasercontent-right teaser-link column" title="divankleed">
+      
+      <img src="/assets/textiel/KNA 4590.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Retera, Willem<br>divankleed, 1920</p>
+  
+</a>
+<a href="/en/artwork/95199-3-geometrische-vormen" class="teaser teasercontent-right teaser-link column" title="3 geometrische vormen">
+      
+      <img src="/assets/2014.2.0002.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rolf, Margot<br>3 geometrische vormen, 1973</p>
+  
+</a>
+<a href="/en/artwork/35769-uitgaande-van-4-kleuren-xxxii-vier-koorden" class="teaser teasercontent-right teaser-link column" title="Uitgaande van 4 kleuren XXXII, Vier koorden">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rolf, Margot<br>Uitgaande van 4 kleuren XXXII, Vier koorden, 1981</p>
+  
+</a>
+<a href="/en/artwork/16437-theedoek" class="teaser teasercontent-right teaser-link column" title="theedoek">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rolf, Margot<br>theedoek, 1990</p>
+  
+</a>
+<a href="/en/artwork/9640-rode-stippen" class="teaser teasercontent-right teaser-link column" title="Rode stippen">
+      
+      <img src="/assets/1994.1.0171.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Désirée<br>Rode stippen, 1976</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/36180-gordijnstof" class="teaser teasercontent-right teaser-link column" title="gordijnstof">
+      
+      <img src="/assets/KNA 918.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rietveld, Gerrit<br>gordijnstof, 1950</p>
+  
+</a>
+<a href="/en/artwork/89513-uitgaande-van-4-kleuren-vii-3" class="teaser teasercontent-right teaser-link column" title="Uitgaande van 4 kleuren VII-3">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rolf, Margot<br>Uitgaande van 4 kleuren VII-3, 1977</p>
+  
+</a>
+<a href="/en/artwork/9681-uitgaande-van-4-kleuren-xxxix" class="teaser teasercontent-right teaser-link column" title="Uitgaande van 4 kleuren XXXIX">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rolf, Margot<br>Uitgaande van 4 kleuren XXXIX, 1982</p>
+  
+</a>
+<a href="/en/artwork/10070-paisleys" class="teaser teasercontent-right teaser-link column" title="Paisleys">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Rolf, Margot<br>Paisleys, 1996</p>
+  
+</a>
+<a href="/en/artwork/29953-luchtige-omlijning" class="teaser teasercontent-right teaser-link column" title="Luchtige omlijning">
+      
+      <img src="/assets/KNA 6658.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Désirée<br>Luchtige omlijning, 1979</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page32">page 32</h4>
+      
+      <div class="newPage" id="page-32">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/9274-driehoeken" class="teaser teasercontent-right teaser-link column" title="Driehoeken">
+      
+      <img src="/assets/10286_3.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Désirée<br>Driehoeken, 1980</p>
+  
+</a>
+<a href="/en/artwork/17083-vloerkleed" class="teaser teasercontent-right teaser-link column" title="vloerkleed">
+      
+      <img src="/assets/toegepaste kunst/1992.2.1134(1-2)1.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Herman<br>vloerkleed, 1962</p>
+  
+</a>
+<a href="/en/artwork/4222-ruit" class="teaser teasercontent-right teaser-link column" title="Ruit">
+      
+      <img src="/assets/KNA 6659.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Herman<br>Ruit, 1977</p>
+  
+</a>
+<a href="/en/artwork/24942-gordel" class="teaser teasercontent-right teaser-link column" title="gordel">
+      
+      <img src="/assets/textiel/KNB 111.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Siewertsz van Reesema, C.<br>gordel, 1908</p>
+  
+</a>
+<a href="/en/artwork/25707-tas" class="teaser teasercontent-right teaser-link column" title="tas">
+      
+      <img src="/assets/textiel/KNB 115.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Siewertsz van Reesema, C.<br>tas, 1908</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/1378-geen-titel" class="teaser teasercontent-right teaser-link column" title="[geen titel]">
+      
+      <img src="/assets/1997.2.0358.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Herman<br>[geen titel], 1958</p>
+  
+</a>
+<a href="/en/artwork/3548-licht-en-water" class="teaser teasercontent-right teaser-link column" title="Licht en water">
+      
+      <img src="/assets/1461_13.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Herman<br>Licht en water, 1969</p>
+  
+</a>
+<a href="/en/artwork/9682-balken" class="teaser teasercontent-right teaser-link column" title="Balken">
+      
+      <img src="/assets/toegepaste kunst/KNA 6166(1-2)2.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Herman<br>Balken, 1984</p>
+  
+</a>
+<a href="/en/artwork/25705-gordel" class="teaser teasercontent-right teaser-link column" title="gordel">
+      
+      <img src="/assets/textiel/KNB 113.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Siewertsz van Reesema, C.<br>gordel, 1908</p>
+  
+</a>
+<a href="/en/artwork/25704-gordel" class="teaser teasercontent-right teaser-link column" title="gordel">
+      
+      <img src="/assets/textiel/KNB 112.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Siewertsz van Reesema, C.<br>gordel, begin 20e eeuw</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/20449-prelude" class="teaser teasercontent-right teaser-link column" title="Prélude">
+      
+      <img src="/assets/KNB319.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Herman<br>Prélude, 1958</p>
+  
+</a>
+<a href="/en/artwork/7294-op-en-neer" class="teaser teasercontent-right teaser-link column" title="Op en neer">
+      
+      <img src="/assets/KNA 3288.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Herman<br>Op en neer, 1970</p>
+  
+</a>
+<a href="/en/artwork/9683-blauwe-wolk" class="teaser teasercontent-right teaser-link column" title="Blauwe wolk">
+      
+      <img src="/assets/1991.1.0056.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Scholten, Herman<br>Blauwe wolk, 1987</p>
+  
+</a>
+<a href="/en/artwork/25706-gordel" class="teaser teasercontent-right teaser-link column" title="gordel">
+      
+      <img src="/assets/textiel/KNB 114.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Siewertsz van Reesema, C.<br>gordel, 1908</p>
+  
+</a>
+<a href="/en/artwork/16438-ambaum" class="teaser teasercontent-right teaser-link column" title="'Ambaum'">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Struycken, Peter<br>'Ambaum', 1989</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page33">page 33</h4>
+      
+      <div class="newPage" id="page-33">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/21119-grit" class="teaser teasercontent-right teaser-link column" title="Grit">
+      
+      <img src="/assets/textiel/2003.1.0255(1-7).jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Struycken, Peter<br>Grit, 2001</p>
+  
+</a>
+<a href="/en/artwork/73590-colourful-greys" class="teaser teasercontent-right teaser-link column" title="Colourful Greys">
+      
+      <img src="/assets/toegepaste kunst/2005.2.0234(1-12).JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Struycken, Peter<br>Colourful Greys</p>
+  
+</a>
+<a href="/en/artwork/30218-lap" class="teaser teasercontent-right teaser-link column" title="lap">
+      
+      <img src="/assets/textiel/KNA 3429a.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Thorn Prikker, Johan<br>lap, 1900</p>
+  
+</a>
+<a href="/en/artwork/36213-ovika" class="teaser teasercontent-right teaser-link column" title="Ovika">
+      
+      <img src="/assets/textiel/KNA 2160.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Visser, Carel<br>Ovika, 1957</p>
+  
+</a>
+<a href="/en/artwork/36223-groene-tulp" class="teaser teasercontent-right teaser-link column" title="Groene Tulp">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Groene Tulp, 1988</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/19566-wandkleed" class="teaser teasercontent-right teaser-link column" title="wandkleed">
+      
+      <img src="/assets/2003.1.0089.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Struycken, Peter<br>wandkleed, 2002-12-18</p>
+  
+</a>
+<a href="/en/artwork/75310-insecten-sjaal" class="teaser teasercontent-right teaser-link column" title="Insecten-sjaal">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Studio Job<br>Insecten-sjaal, 2003</p>
+  
+</a>
+<a href="/en/artwork/18842-karim" class="teaser teasercontent-right teaser-link column" title="Karim">
+      
+      <img src="/assets/KNA 1784.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vasarély, Victor<br>Karim, 1951</p>
+  
+</a>
+<a href="/en/artwork/36214-ovika" class="teaser teasercontent-right teaser-link column" title="Ovika">
+      
+      <img src="/assets/textiel/KNA 2161.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Visser, Carel<br>Ovika, 1957</p>
+  
+</a>
+<a href="/en/artwork/36224-brons-tulp" class="teaser teasercontent-right teaser-link column" title="Brons tulp">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Brons tulp, 1988</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/19567-wandkleed" class="teaser teasercontent-right teaser-link column" title="wandkleed">
+      
+      <img src="/assets/2003.1.0088.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Struycken, Peter<br>wandkleed, 2002-12-23</p>
+  
+</a>
+<a href="/en/artwork/86205-insects-tea-towel" class="teaser teasercontent-right teaser-link column" title="Insects Tea Towel">
+      
+      <img src="/assets/2015/2006.2.0587. black.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Studio Job<br>Insects Tea Towel, 2004</p>
+  
+</a>
+<a href="/en/artwork/6030-shawl" class="teaser teasercontent-right teaser-link column" title="shawl">
+      
+      <img src="/assets/150_3.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vecht, Nicolaas Johannes van de<br>shawl, 1919</p>
+  
+</a>
+<a href="/en/artwork/36215-ovika" class="teaser teasercontent-right teaser-link column" title="Ovika">
+      
+      <img src="/assets/textiel/KNA 2162.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Visser, Carel<br>Ovika, 1957</p>
+  
+</a>
+<a href="/en/artwork/36225-huilende-tulp" class="teaser teasercontent-right teaser-link column" title="Huilende tulp">
+      
+      <img src="/assets/textiel/1989.2.0205.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Huilende tulp, 1988</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page34">page 34</h4>
+      
+      <div class="newPage" id="page-34">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/80052-brons-tulp" class="teaser teasercontent-right teaser-link column" title="Brons tulp">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Brons tulp, 1988</p>
+  
+</a>
+<a href="/en/artwork/21090-contoura" class="teaser teasercontent-right teaser-link column" title="Contoura">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Contoura, 1993</p>
+  
+</a>
+<a href="/en/artwork/21093-lotus" class="teaser teasercontent-right teaser-link column" title="Lotus">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Lotus, 1993</p>
+  
+</a>
+<a href="/en/artwork/77667-violets" class="teaser teasercontent-right teaser-link column" title="Violets">
+      
+      <img src="/assets/2005.2.0375.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Violets, 1996</p>
+  
+</a>
+<a href="/en/artwork/77670-sophia" class="teaser teasercontent-right teaser-link column" title="Sophia">
+      
+      <img src="/assets/2005.2.0378.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Sophia, 1998</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/3898-who-shot-bruno" class="teaser teasercontent-right teaser-link column" title="Who shot Bruno?">
+      
+      <img src="/assets/1994.1.0086.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Who shot Bruno?, 1993</p>
+  
+</a>
+<a href="/en/artwork/21091-vicia" class="teaser teasercontent-right teaser-link column" title="Vicia">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Vicia, 1993</p>
+  
+</a>
+<a href="/en/artwork/21094-flower-power" class="teaser teasercontent-right teaser-link column" title="Flower Power">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Flower Power, 1993</p>
+  
+</a>
+<a href="/en/artwork/77669-landscape" class="teaser teasercontent-right teaser-link column" title="Landscape">
+      
+      <img src="/assets/2005.2.0377.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Landscape, 1997</p>
+  
+</a>
+<a href="/en/artwork/25553-festival" class="teaser teasercontent-right teaser-link column" title="Festival">
+      
+      <img src="/assets/textiel/2003.1.0592.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Festival, 2001</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/21089-furore" class="teaser teasercontent-right teaser-link column" title="Furore">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Furore, 1993</p>
+  
+</a>
+<a href="/en/artwork/21092-jorge" class="teaser teasercontent-right teaser-link column" title="Jorge">
+      
+      <img src="/assets//copyright/restrictions.png?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Jorge, 1993</p>
+  
+</a>
+<a href="/en/artwork/77666-eden" class="teaser teasercontent-right teaser-link column" title="Eden">
+      
+      <img src="/assets/2005.2.0374.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Eden, 1996</p>
+  
+</a>
+<a href="/en/artwork/77665-domus" class="teaser teasercontent-right teaser-link column" title="Domus">
+      
+      <img src="/assets/2005.2.0373.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Domus, 1998</p>
+  
+</a>
+<a href="/en/artwork/25554-princess" class="teaser teasercontent-right teaser-link column" title="Princess">
+      
+      <img src="/assets/textiel/2003.1.0593.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Princess, 2001</p>
+  
+</a>
+        </div>
+      </div>
+    
+      
+      <h4 class="paging" id="page35">page 35</h4>
+      
+      <div class="newPage" id="page-35">
+
+        
+
+        <div class="column"> 
+        
+<a href="/en/artwork/25555-bruno" class="teaser teasercontent-right teaser-link column" title="Bruno">
+      
+      <img src="/assets/textiel/2003.1.0594.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Bruno, 2001</p>
+  
+</a>
+<a href="/en/artwork/25558-florinda" class="teaser teasercontent-right teaser-link column" title="Florinda">
+      
+      <img src="/assets/textiel/2003.1.0597.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Florinda, 2001</p>
+  
+</a>
+<a href="/en/artwork/9541-lap" class="teaser teasercontent-right teaser-link column" title="lap">
+      
+      <img src="/assets/22273.jpg?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Wegerif-Gravestein, Agathe<br>lap, 1905</p>
+  
+</a>
+        </div>
+        <div class="column">      
+        
+<a href="/en/artwork/25556-parade" class="teaser teasercontent-right teaser-link column" title="Parade">
+      
+      <img src="/assets/textiel/2003.1.0595.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Parade, 2001</p>
+  
+</a>
+<a href="/en/artwork/77664-flos" class="teaser teasercontent-right teaser-link column" title="Flos">
+      
+      <img src="/assets/2005.2.0372.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Flos, 2001</p>
+  
+</a>
+<a href="/en/artwork/15978-handcomputer-1" class="teaser teasercontent-right teaser-link column" title="Handcomputer 1">
+      
+      <img src="/assets/2002.1.0325.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Wolf, Lam de<br>Handcomputer 1, 2001</p>
+  
+</a>
+        </div>
+        <div class="column last-column">    
+        
+<a href="/en/artwork/25557-florinda" class="teaser teasercontent-right teaser-link column" title="Florinda">
+      
+      <img src="/assets/textiel/2003.1.0596.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Florinda, 2001</p>
+  
+</a>
+<a href="/en/artwork/77668-baccara" class="teaser teasercontent-right teaser-link column" title="Baccara">
+      
+      <img src="/assets/2005.2.0376.JPG?w=222&amp;404=backup" alt="header image">
+    
+    <p class="description">Vrolijk, Maarten<br>Baccara, 2004</p>
+  
+</a>
+        </div>
+      </div>
+    </div>
+    
+</div>
+    <div class="clear">&nbsp;</div>
+    <div id="moreSearchResults"></div>
+  </section>
+
+          </article>
+        
+        
+          
+          <footer>
+            
+
+
+
+
+<div class="justify">
+
+<ul>
+  
+    <li><a href="/en/contact">Contact</a> </li>
+  
+    <li><a href="/en/press">Press</a> </li>
+  
+    <li><a href="/en/about-the-stedelijk/news">News</a> </li>
+  
+    <li><a href="/en/about-the-stedelijk">About the Stedelijk</a> </li>
+  
+</ul>
+
+<ul>
+  
+    <li><a href="/en/artours">Artours</a> </li>
+  
+    <li><a href="/en/stedelijk-presents/video">Video</a> </li>
+  
+</ul>
+
+
+<ul class="staticList">
+  <li class="title">follow us</li>
+  <li><a href="http://www.facebook.com/Stedelijk" target="_blank">Facebook</a></li>
+  <li><a href="http://twitter.com/stedelijk" target="_blank">Twitter</a></li>
+  <li><a href="http://plus.google.com/116714614472712900461" target="_blank">Google Plus</a></li>
+  <li><a href="http://instagram.com/stedelijkmuseum" target="_blank">Instagram</a></li>
+</ul>
+
+<ul class="staticList">
+  <li class="title">stay informed</li>
+  <li><a href="http://journal.stedelijk.nl" target="_blank">Stedelijk blog</a></li>
+  <li><a href="http://global.stedelijk.nl/en/" target="_blank">Global blog</a></li>
+  <li><a href="/en/general-information/stay-informed" target="_blank">Sign up for our newsletter</a></li>  
+  <li><a href="http://www.stedelijkstudies.com" target="_blank">Stedelijk Studies</a></li>  
+</ul>
+
+<div class="sentinel"></div>
+
+</div>
+
+<ul class="subfooter">
+  <li><span>© 2017 Stedelijk Museum Amsterdam</span></li>
+  <li><a href="/en/faq">FAQ</a></li>
+  <li><a href="/en/colophon">Colophon</a></li>
+  <li><a href="/en/disclaimer">Disclaimer</a></li>
+</ul>
+
+          </footer>
+        </section>
+        <section id="secondary-content">
+          
+        </section>
+
+
+    </section>
+
+  <div id="lightbox" class="hidden"><div class="closeIcon"></div><div class="loader"></div></div></div>
+  <script>
+    var language = "en-GB";
+  </script>
+  
+  <script type="text/javascript" src="/combres.axd/searchJs/-729797643/"></script>
+  <script>
+    var searchPlaceHolder = 'Search';
+  </script>
+
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5633248-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</body></html>
