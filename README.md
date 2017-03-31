@@ -1,0 +1,1 @@
+![black](hhttps://github.com/jessherzog/stedelijk/blob/master/final_patchworks%20%5BJPG%5D/tile_Page_01.jpg?raw=true)
